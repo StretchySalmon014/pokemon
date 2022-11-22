@@ -1,4 +1,7 @@
 import { DeckState } from "../context/Context";
+import SingleCard from "./SingleCard";
+
+
 
 const Home = () => {  
 
@@ -11,7 +14,9 @@ const Home = () => {
   return(
   <div className='home'>
     <div className='itemContainer'>
-      Home
+      {pokeItems.map((poke) =>{
+        return <SingleCard pokemon = {poke} key = {poke}> </SingleCard> 
+      })}
     </div>
   </div>);
   
