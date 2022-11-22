@@ -1,5 +1,7 @@
 import { DeckState } from "../context/Context";
 import SingleCard from "./SingleCard";
+import Filters from "./Filters";
+import "./style.css"
 
 
 
@@ -13,6 +15,7 @@ const Home = () => {
 
   return(
   <div className='home'>
+    <Filters/>
     <div className='itemContainer'>
       {pokeItems.map((poke) =>{
         return <SingleCard pokemon = {poke} key = {poke}> </SingleCard> 

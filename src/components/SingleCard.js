@@ -1,7 +1,7 @@
 const SingleCard = ({pokemon}) => {
     return (
         <div>
-            {pokemon.type}
+            {pokemon.name}
         </div>
     )
 };

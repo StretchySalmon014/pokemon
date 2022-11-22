@@ -14,6 +14,7 @@ const Context = ({children}) => {
     weight: item.weight,
     ability: item.ability,
     art: item.art,
+    rating: item.rating,
   }));
 
   const [state, dispatch] = useReducer(deckReducer, {
