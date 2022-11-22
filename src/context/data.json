@@ -1,0 +1,29 @@
+[
+    {
+        "id" : 0,
+        "name" : "Charmander",
+        "type": "Fire",
+        "height": 0.6,
+        "weight": 8.5,
+        "ability": "Blaze",
+        "art" : "/imgs/charmander.png"
+    },
+    {
+        "id" : 1,
+        "name" : "Bulbasaur",
+        "type": "Grass",
+        "height": 0.7,
+        "weight": 6.9,
+        "ability": "Overgrow",
+        "art" : "/imgs/bulbasaur.jpg"
+    },
+    {
+        "id" : 2,
+        "name" : "Squirtle",
+        "type": "Water",
+        "height": 0.5,
+        "weight": 9.0,
+        "ability": "Torrent",
+        "art" : "/imgs/squirtle.png"
+    }
+]
