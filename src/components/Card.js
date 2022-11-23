@@ -23,6 +23,9 @@ const PokeCard = ({pokemon}) => {
                             <Card.Subtitle className="pokeSubtitle">
                             <span>Ability: {pokemon.ability}</span>
                             </Card.Subtitle>
+                            <Card.Subtitle className="pokeSubtitle">
+                            <span>CP: {pokemon.cp}</span>
+                            </Card.Subtitle>
                         <Rating rating={pokemon.rating}/>
                 </Card.Body>
                 <span>

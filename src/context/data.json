@@ -7,7 +7,8 @@
         "weight": 8.5,
         "ability": "Blaze",
         "art" : "/imgs/charmander.png",
-        "rating": 4
+        "rating": 4,
+        "cp": 564
     },
     {
         "id" : 1,
@@ -17,7 +18,8 @@
         "weight": 6.9,
         "ability": "Overgrow",
         "art" : "/imgs/bulbasaur.jpg",
-        "rating": 3
+        "rating": 3,
+        "cp": 440
     },
     {
         "id" : 2,
@@ -27,6 +29,7 @@
         "weight": 9.0,
         "ability": "Torrent",
         "art" : "/imgs/squirtle.png",
-        "rating" : 3
+        "rating" : 3,
+        "cp": 467
     }
 ]
