@@ -28,7 +28,7 @@ const PokeHeader = () => {
                 <Dropdown alignRight>
                     <Dropdown.Toggle variant="success">
                     <MdCatchingPokemon size={38} color = "white" fontSize="25px"/>
-                    <Badge pill  bg="light" text="dark"> {1} </Badge>
+                    <Badge pill  bg="light" text="dark"> {0} </Badge>
                     </Dropdown.Toggle>
                     <Dropdown.Menu style = {{minWidth : 370}}>
                         <span style= {{padding: 20}}> Deck is Empty</span>

@@ -1,4 +1,4 @@
-import {Card} from "react-bootstrap"
+import {Card, Button} from "react-bootstrap"
 import Rating from "./Rating"
 import "./style.css"
 
@@ -25,6 +25,10 @@ const PokeCard = ({pokemon}) => {
                             </Card.Subtitle>
                         <Rating rating={pokemon.rating}/>
                 </Card.Body>
+                <span>
+                        <Button variant="danger" className="removeButton">Remove</Button>{' '}
+                        <Button variant="success" className="addButton">Add to Deck</Button>{' '}
+                </span>
             </Card>
         </div>
     )

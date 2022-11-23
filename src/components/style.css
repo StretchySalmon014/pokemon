@@ -37,3 +37,19 @@
 .pokeSubtitle {
     padding : 8px;
 }
+
+.addButton {
+    padding : 8px;
+    justify-content: space-around;
+}
+
+.removeButton {
+    size: 50px;
+    padding : 8px;
+    justify-content: space-around;
+}
+
+.pokemonCards{
+    width: 30%;
+    margin: 10px;
+}
