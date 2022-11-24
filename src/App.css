@@ -15,3 +15,7 @@ body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
+
+.App{
+  background-color: rgb(40, 40, 40);
+}

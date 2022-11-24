@@ -1,15 +1,19 @@
 import {Card, Button} from "react-bootstrap"
 import Rating from "./Rating"
+import {DeckState} from "../context/Context"
 import "./style.css"
 
 const PokeCard = ({pokemon}) => {
+    const {
+        state: {deck},
+        dispatch} = DeckState();
     return (
         <div className = "pokemonCards">
-            <Card>
+            <Card className = "cardBorder">
                 <Card.Img 
                 variant = "top"
                 src={pokemon.art}
-                height = "280px" 
+                height = "270px" 
                 style = {{objectFit: "cover"}}
                 alt ={pokemon.name}/>
                 <Card.Body>
@@ -28,10 +32,29 @@ const PokeCard = ({pokemon}) => {
                             </Card.Subtitle>
                         <Rating rating={pokemon.rating}/>
                 </Card.Body>
-                <span>
-                        <Button variant="danger" className="removeButton">Remove</Button>{' '}
-                        <Button variant="success" className="addButton">Add to Deck</Button>{' '}
-                </span>
+                {
+                    deck.some(p => p.id === pokemon.id) ? (
+                        <Button
+                        onClick={() =>{
+                            dispatch({
+                                type: "REMOVE_FROM_DECK",
+                                payload: pokemon,
+                            })
+                        }}
+                        variant="danger" 
+                        className="cardButton">Remove</Button>
+                    ) : (
+                        <Button
+                        onClick={() =>{
+                            dispatch({
+                                type: "ADD_TO_DECK",
+                                payload: pokemon,
+                            })
+                        }}
+                        variant="info" 
+                        className="cardButton">Add to Deck
+                        </Button>
+                )}
             </Card>
         </div>
     )

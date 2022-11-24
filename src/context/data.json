@@ -29,7 +29,40 @@
         "weight": 9.0,
         "ability": "Torrent",
         "art" : "/imgs/squirtle.png",
-        "rating" : 3,
+        "rating" : 3.5,
         "cp": 467
+    },
+    {
+        "id" : 3,
+        "name" : "Eevee",
+        "type": "Normal",
+        "height": 0.3,
+        "weight": 6.5,
+        "ability": "Adaptability",
+        "art" : "/imgs/eevee.png",
+        "rating": 2,
+        "cp": 340
+    },
+    {
+        "id" : 4,
+        "name" : "Jolteon",
+        "type": "Electric",
+        "height": 0.8,
+        "weight": 24.5,
+        "ability": "Volt Absorb",
+        "art" : "/imgs/jolteon.png",
+        "rating": 3,
+        "cp": 650
+    },
+    {
+        "id" : 5,
+        "name" : "Porygon",
+        "type": "Normal",
+        "height": 0.8,
+        "weight": 36.5,
+        "ability": "Analytic",
+        "art" : "/imgs/porygon.png",
+        "rating" : 3,
+        "cp": 602
     }
 ]
