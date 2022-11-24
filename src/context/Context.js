@@ -21,7 +21,9 @@ const Context = ({children}) => {
   const [state, dispatch] = useReducer(deckReducer, {
     pokeItems: pokeItems,
     deck: []
-  })
+  });
+
+  
 
   console.log(pokeItems)
 
