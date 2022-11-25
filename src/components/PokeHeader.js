@@ -39,7 +39,6 @@ const PokeHeader = () => {
                                 payload: e.target.value,
                                 })
                             }
-                            checked = {searchQuery}
                         />
             </Navbar.Text>
             <Nav>
