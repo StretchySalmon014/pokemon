@@ -1,5 +1,5 @@
 
-import React from 'react'
+import {useState, React, useEffect} from 'react'
 import {Nav, Navbar, Container, FormControl, Dropdown, Badge} from 'react-bootstrap';
 import { MdCatchingPokemon } from 'react-icons/md'
 import { Link } from "react-router-dom";
@@ -17,6 +17,13 @@ const PokeHeader = () => {
     },
     pokeDispatch
   } = DeckState();
+
+  const [totalCP, setTotalCP] = useState();
+
+  useEffect(() => {
+    setTotalCP(deck.reduce((acc, curr) => acc + curr.cp, 0));
+  }, [deck])
+
   return (
     <Navbar className = "pokeHead" variant = "dark" style = {{height: 80}}>
         <Container>
@@ -40,6 +47,9 @@ const PokeHeader = () => {
                                 })
                             }
                         />
+            </Navbar.Text>
+            <Navbar.Text class = "wtf">
+                Deck CP: {totalCP}
             </Navbar.Text>
             <Nav>
                 <Dropdown alignRight>

@@ -11,7 +11,7 @@
 }
 
 .filters {
-    background-color:rgba(52, 170, 220, 0.937);
+    background-color:rgba(43, 139, 181, 0.937);
     color : white;
     padding: 20px;
     display: flex;
@@ -57,7 +57,7 @@
 }
 
 .pokeHead{
-    background-color:rgba(49, 157, 203, 0.937);
+    background-color:rgba(43, 139, 181, 0.937);
 }
 
 .dropDownButton{
@@ -88,3 +88,8 @@
 }
 
 .dropdown-menu { background-color: black; }
+
+.wtf {
+    color: white;
+    font-size: 50;
+}
