@@ -103,7 +103,7 @@ const Filters = () => {
             <span>
                 <Form.Check
                 inline
-                label = "Normal"
+                label = "Filter"
                 name = "group2"
                 type= "radio"
                 id = {'inline-5'}

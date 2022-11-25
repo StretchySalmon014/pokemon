@@ -13,7 +13,7 @@
     {
         "id" : 1,
         "name" : "Bulbasaur",
-        "type": "Grass",
+        "type": "Grass Poison",
         "height": 0.7,
         "weight": 6.9,
         "ability": "Overgrow",
@@ -34,14 +34,14 @@
     },
     {
         "id" : 3,
-        "name" : "Eevee",
-        "type": "Normal",
-        "height": 0.3,
-        "weight": 6.5,
-        "ability": "Adaptability",
-        "art" : "/imgs/eevee.png",
-        "rating": 2,
-        "cp": 340
+        "name" : "Psyduck",
+        "type": "Water",
+        "height": 0.8,
+        "weight": 19.6,
+        "ability": "Cloud Nine",
+        "art" : "/imgs/Psyduck.png",
+        "rating": 4,
+        "cp": 970
     },
     {
         "id" : 4,
@@ -64,5 +64,104 @@
         "art" : "/imgs/Chikorita.png",
         "rating" : 3,
         "cp": 602
+    },
+    {
+        "id" : 6,
+        "name" : "Ivysaur",
+        "type": "Grass Poison",
+        "height": 1.0,
+        "weight": 13.0,
+        "ability": "Chlorophyll",
+        "art" : "/imgs/Ivysaur.png",
+        "rating": 4,
+        "cp": 867
+    },
+    {
+        "id" : 7,
+        "name" : "Venusaur",
+        "type": "Grass Poison",
+        "height": 2.0,
+        "weight": 100.0,
+        "ability": "Overgrow",
+        "art" : "/imgs/Venusaur.png",
+        "rating": 4,
+        "cp": 1102
+    },
+    {
+        "id" : 8,
+        "name" : "Charmeleon",
+        "type": "Fire",
+        "height": 1.1,
+        "weight": 19.0,
+        "ability": "Solar Power",
+        "art" : "/imgs/Charmeleon.png",
+        "rating" : 4,
+        "cp": 780
+    },
+    {
+        "id" : 9,
+        "name" : "Charizard",
+        "type": "Fire Flying",
+        "height": 1.0,
+        "weight": 13.0,
+        "ability": "Blaze",
+        "art" : "/imgs/Charizard.png",
+        "rating": 5,
+        "cp": 1230
+    },
+    {
+        "id" : 10,
+        "name" : "Meganium",
+        "type": "Grass",
+        "height": 1.8,
+        "weight": 100.5,
+        "ability": "Leaf Guard",
+        "art" : "/imgs/Meganium.png",
+        "rating": 4,
+        "cp": 876
+    },
+    {
+        "id" : 11,
+        "name" : "Pichu",
+        "type": " Electric",
+        "height": 0.3,
+        "weight": 2.0,
+        "ability": "Static",
+        "art" : "/imgs/Pichu.png",
+        "rating" : 5,
+        "cp": 998
+    },
+    {
+        "id" : 12,
+        "name" : "Ampharos",
+        "type": "Electric",
+        "height": 1.4,
+        "weight": 61.5,
+        "ability": "Static",
+        "art" : "/imgs/Ampharos.png",
+        "rating": 4,
+        "cp": 1300
+    },
+    {
+        "id" : 13,
+        "name" : "Feraligatr",
+        "type": "Water",
+        "height": 2.3,
+        "weight": 88.8,
+        "ability": "Torrent",
+        "art" : "/imgs/Feraligatr.png",
+        "rating": 5,
+        "cp": 1405
+    },
+    {
+        "id" : 14,
+        "name" : "Moltres",
+        "type": "Fire Flying",
+        "height": 2.0,
+        "weight": 60.0,
+        "ability": "Pressure",
+        "art" : "/imgs/Moltres.png",
+        "rating" : 5,
+        "cp": 1898
     }
 ]
