@@ -11,7 +11,11 @@ import "./style.css"
 const PokeHeader = () => {
   const {
     state :{ deck },
-    dispatch
+    dispatch,
+    pokeState : {
+        searchQuery
+    },
+    pokeDispatch
   } = DeckState();
   return (
     <Navbar className = "pokeHead" variant = "dark" style = {{height: 80}}>
@@ -29,6 +33,13 @@ const PokeHeader = () => {
                     <FormControl style ={{ width: 600}} 
                             placeholder='Search for Pokemon'
                             className = "ml-auto"
+                            onChange={(e) =>
+                                pokeDispatch({
+                                type: "FILTER_BY_SEARCH",
+                                payload: e.target.value,
+                                })
+                            }
+                            checked = {searchQuery}
                         />
             </Navbar.Text>
             <Nav>

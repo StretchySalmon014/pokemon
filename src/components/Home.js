@@ -18,7 +18,7 @@ const Home = () => {
     <Filters/>
     <div className='itemContainer'>
       {pokeItems.map((poke) =>{
-        return <Card pokemon = {poke} key = {poke}> </Card> 
+        return <Card pokemon = {poke} key = {poke.id}> </Card> 
       })}
     </div>
   </div>);

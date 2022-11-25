@@ -1,10 +1,22 @@
 import { Form, Button } from "react-bootstrap";
-import {useState} from 'react';
-import Rating from "./Rating"
+import Rating from "./Rating";
+import { DeckState } from "../context/Context";
 import "./style.css";
 
 const Filters = () => {
-    const [rate, setRate] = useState(3);
+
+    const{pokeState: {
+        byFire,
+        byRating,
+        sort,
+        searchQuery,
+    }, pokeDispatch} = DeckState();
+
+    console.log(byFire,
+        byRating,
+        sort,
+        searchQuery);
+
 
     return (
         <div className="filters">
@@ -16,13 +28,20 @@ const Filters = () => {
                 name = "group1"
                 type= "radio"
                 id = {'inline-1'}
-                />
+                onChange={() =>
+                pokeDispatch({
+                type: "SORT_BY_CP",
+                payload: "lowToHigh"
+                })
+            }
+                checked = {sort === "lowToHigh" ? true : false}
+            />
             </span>
             <span>
                 <Form.Check
                 inline
                 label = "Gen 1"
-                name = "group1"
+                name = "group3"
                 type= "radio"
                 id = {'inline-2'}
                 />
@@ -31,7 +50,7 @@ const Filters = () => {
                 <Form.Check
                 inline
                 label = "Gen 2"
-                name = "group1"
+                name = "group3"
                 type= "radio"
                 id = {'inline-3'}
                 />
@@ -50,16 +69,22 @@ const Filters = () => {
                 <Form.Check
                 inline
                 label = "Fire"
-                name = "group1"
+                name = "group2"
                 type= "radio"
                 id = {'inline-2'}
+                onChange={() =>
+                    pokeDispatch({
+                    type: "FILTER_BY_FIRE",
+                    })
+                }
+                checked={byFire}
                 />
             </span>
             <span>
                 <Form.Check
                 inline
                 label = "Grass"
-                name = "group1"
+                name = "group2"
                 type= "radio"
                 id = {'inline-3'}
                 />
@@ -69,7 +94,7 @@ const Filters = () => {
                 <Form.Check
                 inline
                 label = "Electric"
-                name = "group1"
+                name = "group2"
                 type= "radio"
                 id = {'inline-4'}
                 />
@@ -79,7 +104,7 @@ const Filters = () => {
                 <Form.Check
                 inline
                 label = "Normal"
-                name = "group1"
+                name = "group2"
                 type= "radio"
                 id = {'inline-5'}
                 />
@@ -88,12 +113,23 @@ const Filters = () => {
             <span>
                 <label style= {{paddingRight : 20}}>Rating</label>
                 <Rating 
-                rating = {rate} 
-                onClick = {(i) => setRate(i + 1)}
+                rating = {byRating} 
+                onClick = {(i) => 
+                    pokeDispatch({
+                        type: "FILTER_BY_RATING",
+                        payload: i + 1,
+                    })
+                }
                 style = {{cursor: "pointer"}} />
             </span>
             <div className = "filterButton">
-            <Button variant="light">Clear Filters</Button>
+            <Button 
+            variant="light"
+            onClick = {(i) => 
+                pokeDispatch({
+                    type: "CLEAR_FILTERS",
+                    })
+            }>Clear Filters</Button>
             </div>
         </div>
     )

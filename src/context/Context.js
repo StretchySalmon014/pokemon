@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer} from 'react'
 import PokeData from './data.json'
-import {deckReducer} from './Reducers'
+import {deckReducer, pokeReducer} from './Reducers'
 
 const Deck = createContext();
 
@@ -23,12 +23,14 @@ const Context = ({children}) => {
     deck: []
   });
 
-  
-
-  console.log(pokeItems)
+  const [pokeState, pokeDispatch] = useReducer (pokeReducer, {
+    byFire: false,
+    byRating: 0,
+    searchQuery: "",
+  })
 
   return (
-    <Deck.Provider value = {{state, dispatch}}> {children} </Deck.Provider>
+    <Deck.Provider value = {{state, dispatch, pokeState, pokeDispatch }}> {children} </Deck.Provider>
   )
 };
 
