@@ -1,5 +1,5 @@
 
-import {useState, React, useEffect} from 'react'
+import { React} from 'react'
 import {Nav, Navbar, Container, FormControl, Dropdown, Badge} from 'react-bootstrap';
 import { MdCatchingPokemon } from 'react-icons/md'
 import { Link } from "react-router-dom";
@@ -15,14 +15,9 @@ const PokeHeader = () => {
     pokeState : {
         searchQuery
     },
-    pokeDispatch
+    pokeDispatch,
   } = DeckState();
 
-  const [totalCP, setTotalCP] = useState();
-
-  useEffect(() => {
-    setTotalCP(deck.reduce((acc, curr) => acc + curr.cp, 0));
-  }, [deck])
 
   return (
     <Navbar className = "pokeHead" variant = "dark" style = {{height: 80}}>
@@ -36,28 +31,15 @@ const PokeHeader = () => {
             />
                 <Link to = "/"> My PokeDeck </Link>
             </Navbar.Brand>
-            <Navbar.Text className='search'>
-                    <FormControl style ={{ width: 600}} 
-                            placeholder='Search for Pokemon'
-                            className = "ml-auto"
-                            onChange={(e) =>
-                                pokeDispatch({
-                                type: "FILTER_BY_SEARCH",
-                                payload: e.target.value,
-                                })
-                            }
-                        />
-            </Navbar.Text>
-            <Navbar.Text class = "wtf">
-                Deck CP: {totalCP}
-            </Navbar.Text>
             <Nav>
                 <Dropdown alignRight>
                     <Dropdown.Toggle variant="dark">
                     <MdCatchingPokemon size={38} color = "white" fontSize="25px"/>
                     <Badge pill  bg="dark" text="dark"> {deck.length} </Badge>
                     </Dropdown.Toggle>
-                    <Dropdown.Menu bg = "dark" style = {{minWidth : 250}}>
+                    <Dropdown.Menu style = {{
+                        minWidth : 250
+                    }}>
                         {deck.length > 0 ? (
                             <>
                             {
@@ -78,12 +60,11 @@ const PokeHeader = () => {
                                                 payload: item,
                                             })}/>
                                        <div className = "deckItemDetail">
-                                            <span >CP: {item.cp} </span>
-                                            <span >{item.height} m</span>
-                                            <span >{item.weight} kg</span>
-                                            <span >Ability : {item.ability}
-                                    
-                                            </span>
+                                            <span >{item.name} </span>
+                                            <span >CP: {item.cp}      Gen: {item.gen}</span>
+                                            <span >Weight: {item.weight}kg</span>
+                                            <span >Height: {item.height}m</span>
+                                            <span >Ability : {item.ability}</span>
                                             </div>
                                 </span>
                             </div>   

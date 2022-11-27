@@ -17,15 +17,27 @@ export const pokeReducer = (state, action) => {
             return { ...state, sort: action.payload}
         case 'FILTER_BY_FIRE':
             return { ...state, byFire: !state.byFire}
-        case 'FILTER_BY_RATING':
-            return { ...state, byRating: action.payload}
-        case 'FILTER_BY_SEARCH':
-            return { ...state, searchQuery: action.payload}
+        case 'FILTER_BY_WATER':
+            return { ...state, byWater: !state.byWater}
+        case 'FILTER_BY_ELECTRIC':
+            return { ...state, byElectric: !state.byElectric}
+        case 'FILTER_BY_GRASS':
+            return { ...state, byGrass: !state.byGrass}
+        case 'FILTER_BY_FLYING':
+            return { ...state, byFlying: !state.byFlying}
+        case 'FILTER_BY_GEN1':
+            return { ...state, byGen1: !state.byGen1}
+        case 'FILTER_BY_GEN2':
+            return { ...state, byGen2: !state.byGen2}
         case 'CLEAR_FILTERS':
             return {
+                byWater: false,
                 byFire: false,
-                byRating: 0,
-                searchQuery: "",
+                byGrass: false,
+                byElectric: false,
+                byFlying: false,
+                byGen1: false,
+                byGen2: false,
               }
         default:
             return state

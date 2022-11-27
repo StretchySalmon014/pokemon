@@ -8,7 +8,8 @@
         "ability": "Blaze",
         "art" : "/imgs/charmander.png",
         "rating": 4,
-        "cp": 564
+        "cp": 564,
+        "gen": 1
     },
     {
         "id" : 1,
@@ -19,7 +20,8 @@
         "ability": "Overgrow",
         "art" : "/imgs/bulbasaur.jpg",
         "rating": 3,
-        "cp": 440
+        "cp": 440,
+        "gen": 1
     },
     {
         "id" : 2,
@@ -30,7 +32,8 @@
         "ability": "Torrent",
         "art" : "/imgs/squirtle.png",
         "rating" : 3.5,
-        "cp": 467
+        "cp": 467,
+        "gen": 1
     },
     {
         "id" : 3,
@@ -41,7 +44,8 @@
         "ability": "Cloud Nine",
         "art" : "/imgs/Psyduck.png",
         "rating": 4,
-        "cp": 970
+        "cp": 970,
+        "gen" : 2
     },
     {
         "id" : 4,
@@ -52,7 +56,8 @@
         "ability": "Volt Absorb",
         "art" : "/imgs/jolteon.png",
         "rating": 3,
-        "cp": 650
+        "cp": 650,
+        "gen": 1
     },
     {
         "id" : 5,
@@ -63,7 +68,8 @@
         "ability": "Leaf Guard",
         "art" : "/imgs/Chikorita.png",
         "rating" : 3,
-        "cp": 602
+        "cp": 602,
+        "gen": 2
     },
     {
         "id" : 6,
@@ -74,7 +80,8 @@
         "ability": "Chlorophyll",
         "art" : "/imgs/Ivysaur.png",
         "rating": 4,
-        "cp": 867
+        "cp": 867,
+        "gen": 1
     },
     {
         "id" : 7,
@@ -85,7 +92,8 @@
         "ability": "Overgrow",
         "art" : "/imgs/Venusaur.png",
         "rating": 4,
-        "cp": 1102
+        "cp": 1102,
+        "gen": 1
     },
     {
         "id" : 8,
@@ -96,7 +104,8 @@
         "ability": "Solar Power",
         "art" : "/imgs/Charmeleon.png",
         "rating" : 4,
-        "cp": 780
+        "cp": 780,
+        "gen": 1
     },
     {
         "id" : 9,
@@ -107,7 +116,8 @@
         "ability": "Blaze",
         "art" : "/imgs/Charizard.png",
         "rating": 5,
-        "cp": 1230
+        "cp": 1230,
+        "gen": 1
     },
     {
         "id" : 10,
@@ -118,7 +128,8 @@
         "ability": "Leaf Guard",
         "art" : "/imgs/Meganium.png",
         "rating": 4,
-        "cp": 876
+        "cp": 876,
+        "gen": 2
     },
     {
         "id" : 11,
@@ -129,7 +140,8 @@
         "ability": "Static",
         "art" : "/imgs/Pichu.png",
         "rating" : 5,
-        "cp": 998
+        "cp": 998,
+        "gen": 2
     },
     {
         "id" : 12,
@@ -140,7 +152,8 @@
         "ability": "Static",
         "art" : "/imgs/Ampharos.png",
         "rating": 4,
-        "cp": 1300
+        "cp": 1300,
+        "gen": 2
     },
     {
         "id" : 13,
@@ -151,7 +164,8 @@
         "ability": "Torrent",
         "art" : "/imgs/Feraligatr.png",
         "rating": 5,
-        "cp": 1405
+        "cp": 1405,
+        "gen": 2
     },
     {
         "id" : 14,
@@ -162,6 +176,7 @@
         "ability": "Pressure",
         "art" : "/imgs/Moltres.png",
         "rating" : 5,
-        "cp": 1898
+        "cp": 1898,
+        "gen": 1
     }
 ]

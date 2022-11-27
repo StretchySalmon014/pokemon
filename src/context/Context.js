@@ -15,7 +15,21 @@ const Context = ({children}) => {
     ability: item.ability,
     art: item.art,
     rating: item.rating,
-    cp: item.cp
+    cp: item.cp,
+    gen: item.gen
+  }));
+
+  const initialItems = PokeData.map((item) => ({
+    id: item.id,
+    name: item.name,
+    type: item.type,
+    height: item.height,
+    weight: item.weight,
+    ability: item.ability,
+    art: item.art,
+    rating: item.rating,
+    cp: item.cp,
+    gen: item.gen
   }));
 
   const [state, dispatch] = useReducer(deckReducer, {
@@ -24,13 +38,17 @@ const Context = ({children}) => {
   });
 
   const [pokeState, pokeDispatch] = useReducer (pokeReducer, {
+    byWater: false,
     byFire: false,
-    byRating: 0,
-    searchQuery: "",
+    byGrass: false,
+    byElectric: false,
+    byFlying: false,
+    byGen1: false,
+    byGen2: false,
   })
 
   return (
-    <Deck.Provider value = {{state, dispatch, pokeState, pokeDispatch }}> {children} </Deck.Provider>
+    <Deck.Provider value = {{state, dispatch, pokeState, pokeDispatch, initialItems }}> {children} </Deck.Provider>
   )
 };
 

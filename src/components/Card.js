@@ -1,5 +1,4 @@
 import {Card, Button} from "react-bootstrap"
-import Rating from "./Rating"
 import {DeckState} from "../context/Context"
 import "./style.css"
 
@@ -22,15 +21,14 @@ const PokeCard = ({pokemon}) => {
                             <span>{pokemon.type}</span>
                             </Card.Subtitle>
                             <Card.Subtitle className="pokeSubtitle">
-                            <span>Height: {pokemon.height}m     Weight: {pokemon.weight}kg</span>
+                            <span>Ability: {pokemon.ability}</span>
                             </Card.Subtitle>
                             <Card.Subtitle className="pokeSubtitle">
-                            <span>Ability: {pokemon.ability}</span>
+                            <span>Gen: {pokemon.gen}</span>
                             </Card.Subtitle>
                             <Card.Subtitle className="pokeSubtitle">
                             <span>CP: {pokemon.cp}</span>
                             </Card.Subtitle>
-                        <Rating rating={pokemon.rating}/>
                 </Card.Body>
                 {
                     deck.some(p => p.id === pokemon.id) ? (
