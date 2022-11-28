@@ -123,3 +123,8 @@
       width: 100%;
     }
   }
+
+  .dropdown-menu {         
+    max-height: 600px;
+    overflow-y: auto;
+  }
