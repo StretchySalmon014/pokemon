@@ -8,10 +8,14 @@ https://pokemon-6wfpjdvcq-stretchysalmon014.vercel.app/
 
 #### Major Compnents
 
-- Home
-- PokeHeader
-- Cards 
-- Filters 
+- Home - Returns an object that ties together the majority of the app logic. Within the Home state we import state information describing the current deck and the status of potential filters. Additionally, the home component contains the logic that apple filters and sort options (sourced from useReducer hooks written in Context.js) to the current list of pokemon stored within the page's state. This list of pokemon, called pokeItems, is a responsive list of Card components that get updated; however, this provided a interesting edge case where this updating process (of using a transformCards function) did not allow for the reordering of cards after hitting the 'Clear Filters' button. To solve this edge case, I just added a pre-rended list of parsed JSON data for our pokemon cards to apply when the sort is undefined.
+
+- PokeHeader - Created largely using react-bootstrap. This header holds a png for the app logo and some text for the app title. The most important part is the Dropdown component within this header. This Dropdown menu should update corresponding to the current state of the page. The menu icon should change from 0 to some non negative number that indicates how many pokemon have been added to our deck. There is no limit to the number of pokemon. The Dropdown menu will give the user the ability to view and scroll through the pokemon the user has selected.
+- 
+- Cards - The Card component exports a PokeCard object. This object is a single object that parses our pokemon data (data.json) and in a Card component (imported from react-bootstrap). This card is algo given a Button component that is used to add a pokemon to our deck. In this case on a click the button should send an action of "ADD_TO_DECK" and a payload of this given card for the deckReducer in Reducer.js to switch on and add the given payload to our cart.
+
+- Filters - Takes in the current deck within our state and the filter variables within our state (that tell us which filters are currently applied).
+
 
 ### State
 
